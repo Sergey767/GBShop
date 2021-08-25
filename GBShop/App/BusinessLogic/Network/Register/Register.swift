@@ -12,7 +12,6 @@ class Register: AbstractRequestFactory {
     let errorParser: AbstractErrorParser
     let sessionManager: Session
     let queue: DispatchQueue
-    let baseUrl = URL(string: "https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/")!
     
     init(
         errorParser: AbstractErrorParser,
@@ -26,14 +25,13 @@ class Register: AbstractRequestFactory {
 
 extension Register: RegisterRequestFactory {
     func register(idUser: Int, userName: String, password: String, email: String, gender: String, creditCard: String, bio: String, completionHandler: @escaping (AFDataResponse<RegisterResult>) -> Void) {
-        let requestModel = RegisterUser(baseUrl: baseUrl, idUser: idUser, userName: userName, password: password, email: email, gender: gender, creditCard: creditCard, bio: bio)
+        let requestModel = RegisterUser(idUser: idUser, userName: userName, password: password, email: email, gender: gender, creditCard: creditCard, bio: bio)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
 }
 
 extension Register {
     struct RegisterUser: RequestRouter {
-        let baseUrl: URL
         let method: HTTPMethod = .get
         let path: String = "registerUser.json"
         

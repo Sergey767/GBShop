@@ -13,7 +13,6 @@ enum RequestRouterEncoding {
 }
 
 protocol RequestRouter: URLRequestConvertible {
-    var baseUrl: URL { get }
     var method: HTTPMethod { get }
     var path: String { get }
     var parameters: Parameters? { get }
@@ -22,6 +21,9 @@ protocol RequestRouter: URLRequestConvertible {
 }
 
 extension RequestRouter {
+    
+    var baseUrl: URL {URL(string: "https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/")!}
+    
     var fullUrl: URL {
         return baseUrl.appendingPathComponent(path)
     }

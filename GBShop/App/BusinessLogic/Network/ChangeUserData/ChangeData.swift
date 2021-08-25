@@ -12,7 +12,6 @@ class ChangeData: AbstractRequestFactory {
     var errorParser: AbstractErrorParser
     var sessionManager: Session
     var queue: DispatchQueue
-    let baseUrl = URL(string: "https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/")!
     
     init(
         errorParser: AbstractErrorParser,
@@ -26,14 +25,13 @@ class ChangeData: AbstractRequestFactory {
 
 extension ChangeData: ChangeDataRequestFactory {
     func changeUserData(idUser: Int, userName: String, password: String, email: String, gender: String, creditCard: String, bio: String, completionHandler: @escaping (AFDataResponse<ChangeDataResult>) -> Void) {
-        let requestModel = ChangeUserData(baseUrl: baseUrl, idUser: idUser, userName: userName, password: password, email: email, gender: gender, creditCard: creditCard, bio: bio)
+        let requestModel = ChangeUserData(idUser: idUser, userName: userName, password: password, email: email, gender: gender, creditCard: creditCard, bio: bio)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
 }
 
 extension ChangeData {
     struct ChangeUserData: RequestRouter {
-        let baseUrl: URL
         let method: HTTPMethod = .get
         let path: String = "changeUserData.json"
         

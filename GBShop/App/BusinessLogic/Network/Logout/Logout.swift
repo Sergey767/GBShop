@@ -12,7 +12,6 @@ class Logout: AbstractRequestFactory {
     var errorParser: AbstractErrorParser    
     var sessionManager: Session
     var queue: DispatchQueue
-    let baseUrl = URL(string: "https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/")!
     
     init(
         errorParser: AbstractErrorParser,
@@ -26,14 +25,13 @@ class Logout: AbstractRequestFactory {
 
 extension Logout: LogoutRequestFactory {
     func logout(idUser: Int, completionHandler: @escaping (AFDataResponse<LogoutResult>) -> Void) {
-        let requestModel = LogoutUser(baseUrl: baseUrl, idUser: idUser)
+        let requestModel = LogoutUser(idUser: idUser)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
 }
 
 extension Logout {
     struct LogoutUser: RequestRouter {
-        let baseUrl: URL
         let method: HTTPMethod = .get
         let path: String = "logout.json"
         
