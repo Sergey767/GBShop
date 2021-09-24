@@ -24,7 +24,6 @@
 		9918B0A626C8519A005D83A9 /* AbstractRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9918B0A526C8519A005D83A9 /* AbstractRequestFactory.swift */; };
 		9918B0A826C855C6005D83A9 /* RequestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9918B0A726C855C6005D83A9 /* RequestRouter.swift */; };
 		9918B0AA26C8698F005D83A9 /* LoginResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9918B0A926C8698F005D83A9 /* LoginResult.swift */; };
-		9918B0AC26C869E4005D83A9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9918B0AB26C869E4005D83A9 /* User.swift */; };
 		9918B0AE26C86A6D005D83A9 /* AuthRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9918B0AD26C86A6D005D83A9 /* AuthRequestFactory.swift */; };
 		9918B0B026C86BC0005D83A9 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9918B0AF26C86BC0005D83A9 /* Auth.swift */; };
 		9918B0B226C874FA005D83A9 /* RequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9918B0B126C874FA005D83A9 /* RequestFactory.swift */; };
@@ -94,7 +93,6 @@
 		9918B0A526C8519A005D83A9 /* AbstractRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractRequestFactory.swift; sourceTree = "<group>"; };
 		9918B0A726C855C6005D83A9 /* RequestRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestRouter.swift; sourceTree = "<group>"; };
 		9918B0A926C8698F005D83A9 /* LoginResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResult.swift; sourceTree = "<group>"; };
-		9918B0AB26C869E4005D83A9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9918B0AD26C86A6D005D83A9 /* AuthRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRequestFactory.swift; sourceTree = "<group>"; };
 		9918B0AF26C86BC0005D83A9 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
 		9918B0B126C874FA005D83A9 /* RequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestFactory.swift; sourceTree = "<group>"; };
@@ -352,7 +350,6 @@
 			isa = PBXGroup;
 			children = (
 				9918B0A926C8698F005D83A9 /* LoginResult.swift */,
-				9918B0AB26C869E4005D83A9 /* User.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -686,7 +683,6 @@
 				99169F8626C661AE00E5910D /* AppDelegate.swift in Sources */,
 				9918B0AA26C8698F005D83A9 /* LoginResult.swift in Sources */,
 				9918B0B026C86BC0005D83A9 /* Auth.swift in Sources */,
-				9918B0AC26C869E4005D83A9 /* User.swift in Sources */,
 				995BC76526D2A03900B00FA6 /* ProductListRequestFactory.swift in Sources */,
 				99169F8826C661AE00E5910D /* SceneDelegate.swift in Sources */,
 				994EA07326C9C62B0069BDCF /* Logout.swift in Sources */,

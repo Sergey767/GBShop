@@ -24,7 +24,7 @@ class ProductList: AbstractRequestFactory {
 }
 
 extension ProductList: ProductListRequestFactory {
-    func getProductsList(pageNumber: Int, idCategory: Int, completionHandler: @escaping (AFDataResponse<[ProductListResult]>) -> Void) {
+    func getProductsList(pageNumber: Int, idCategory: Int, completionHandler: @escaping (AFDataResponse<ProductListResult>) -> Void) {
         let requestModel = Products(pageNumber: pageNumber, idCategory: idCategory)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
@@ -32,8 +32,8 @@ extension ProductList: ProductListRequestFactory {
 
 extension ProductList {
     struct Products: RequestRouter {
-        let method: HTTPMethod = .get
-        let path: String = "catalogData.json"
+        let method: HTTPMethod = .post
+        let path: String = "productList"
         
         let pageNumber: Int
         let idCategory: Int

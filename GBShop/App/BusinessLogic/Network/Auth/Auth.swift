@@ -32,8 +32,8 @@ extension Auth: AuthRequestFactory {
 
 extension Auth {
     struct Login: RequestRouter {
-        let method: HTTPMethod = .get
-        let path: String = "login.json"
+        let method: HTTPMethod = .post
+        let path: String = "auth"
         
         let login: String
         let password: String

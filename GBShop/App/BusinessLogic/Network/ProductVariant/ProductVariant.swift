@@ -32,8 +32,8 @@ extension ProductVariant: GetProductVariantRequestFactory {
 
 extension ProductVariant {
     struct GetProductVariant: RequestRouter {
-        var method: HTTPMethod = .get
-        var path: String = "getGoodById.json"
+        var method: HTTPMethod = .post
+        var path: String = "productVariant"
         
         let idProduct: Int
         

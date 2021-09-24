@@ -22,7 +22,9 @@ protocol RequestRouter: URLRequestConvertible {
 
 extension RequestRouter {
     
-    var baseUrl: URL {URL(string: "https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/")!}
+//    var baseUrl: URL { URL(string: "https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/")! }
+
+    var baseUrl: URL { URL(string: "https://fathomless-wave-09540.herokuapp.com/")! }
     
     var fullUrl: URL {
         return baseUrl.appendingPathComponent(path)

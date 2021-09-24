@@ -32,8 +32,8 @@ extension ChangeData: ChangeDataRequestFactory {
 
 extension ChangeData {
     struct ChangeUserData: RequestRouter {
-        let method: HTTPMethod = .get
-        let path: String = "changeUserData.json"
+        let method: HTTPMethod = .post
+        let path: String = "changeUserData"
         
         let idUser: Int
         let userName: String

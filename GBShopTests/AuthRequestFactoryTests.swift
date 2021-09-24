@@ -32,7 +32,7 @@ class AuthRequestFactoryTests: XCTestCase {
             switch response.result {
             case .success(let login):
                 print(login)
-                XCTAssertEqual(login.user.login, "geekbrains")
+                XCTAssertEqual(login.login, "geekbrains")
                 loggedIn.fulfill()
             case .failure(let error):
                 XCTFail(error.localizedDescription)
